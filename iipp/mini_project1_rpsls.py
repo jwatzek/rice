@@ -1,5 +1,4 @@
-# Rock-paper-scissors-lizard-Spock template
-
+# Rock-paper-scissors-lizard-Spock
 
 # The key idea of this program is to equate the strings
 # "rock", "paper", "scissors", "lizard", "Spock" to numbers
@@ -14,39 +13,24 @@
 import random
 
 # helper functions
-
 def name_to_number(name):
-    if name == 'rock':
-        num = 0
-    elif name == 'Spock':
-        num = 1
-    elif name == 'paper':
-        num = 2
-    elif name == 'lizard':
-        num = 3
-    elif name == 'scissors':
-        num = 4
-    else:
-        print 'Invalid choice.'
+    if name == 'rock':          num = 0
+    elif name == 'Spock':       num = 1
+    elif name == 'paper':       num = 2
+    elif name == 'lizard':      num = 3
+    elif name == 'scissors':    num = 4
+    else:   print 'Invalid choice.'
     return num
 
-
 def number_to_name(number):
-    if number == 0:
-        name = 'rock'
-    elif number == 1:
-        name = 'Spock'
-    elif number == 2:
-        name = 'paper'
-    elif number == 3:
-        name = 'lizard'
-    elif number == 4:
-        name = 'scissors'
-    else:
-        print 'Number is out of range.'
+    if number == 0:         name = 'rock'
+    elif number == 1:       name = 'Spock'
+    elif number == 2:       name = 'paper'
+    elif number == 3:       name = 'lizard'
+    elif number == 4:       name = 'scissors'
+    else:   print 'Number is out of range.'
     return name
     
-
 def rpsls(player_choice): 
     print
     
@@ -71,13 +55,10 @@ def rpsls(player_choice):
         print 'Computer wins!'
     return
 
-    
+
 # testing the code
 rpsls("rock")
 rpsls("Spock")
 rpsls("paper")
 rpsls("lizard")
 rpsls("scissors")
-
-
-
