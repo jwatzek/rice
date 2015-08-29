@@ -38,10 +38,8 @@ def input_guess(guess):
     print 'Guess was', guess
     print 'Number of remaining guesses is', num_guesses
 
-    if secret_number > guess:
-        print 'Higher!'
-    elif secret_number < guess:
-        print 'Lower!'
+    if secret_number > guess:    print 'Higher!'
+    elif secret_number < guess:  print 'Lower!'
     else:
         print 'Correct!'
         new_game()
@@ -61,6 +59,3 @@ f.add_input('Enter guess:', input_guess, 100)
 
 # call new_game 
 range100()
-
-
-# always remember to check your completed program against the grading rubric
