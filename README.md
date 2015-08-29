@@ -1,7 +1,7 @@
 # Rice Coursera Python courses
 These are the miniprojects for the Rice Coursera Python courses *Introduction to Interactive Programming with Python* and *Principles of Computing*.
 
-All miniprojects can be run in [Codeskulptor](codeskulptor.org).
+All miniprojects can be run in [Codeskulptor](http://www.codeskulptor.org/).
 
 ## Miniprojects
 
