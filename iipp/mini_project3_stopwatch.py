@@ -45,10 +45,8 @@ def reset():
 def tick():
     """Increment global time in tenths of seconds. Maximum time is 9:59:9."""
     global time
-    if time < 5999:
-        time += 1
-    else:
-        timer.stop()
+    if time < 5999:  time += 1
+    else:            timer.stop()
 
 # define draw handler
 def draw(canvas):
