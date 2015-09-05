@@ -2,7 +2,8 @@
 Clone of 2048 game.
 """
 
-import poc_2048_gui
+# import poc_2048_gui
+import mini_project2_test as test
 
 # Directions, DO NOT MODIFY
 UP = 1
@@ -57,39 +58,35 @@ def merge(line):
 
 
 class TwentyFortyEight:
-    """
-    Class to run the game logic.
-    """
+    """Class to run the game logic."""
 
     def __init__(self, grid_height, grid_width):
         self.height = grid_height
         self.width = grid_width
+        self.reset()
 
     def reset(self):
-        """
-        Reset the game so the grid is empty except for two
-        initial tiles.
-        """
-        # replace with your code
-        pass
+        """Reset the game so the grid is empty except for two initial tiles."""
+        self.board = [[0 for dummy_col in range(self.width)]
+                         for dummy_row in range(self.height)]
+        self.new_tile()
+        self.new_tile()
+        return self.board
 
     def __str__(self):
-        """
-        Return a string representation of the grid for debugging.
-        """
-        # replace with your code
-        return ""
+        """Return a string representation of the grid for debugging."""
+        prt = '\n'
+        for row in self.board:
+            prt += str(row) + '\n'
+
+        return prt
 
     def get_grid_height(self):
-        """
-        Get the height of the board.
-        """
+        """Get the height of the board."""
         return self.height
 
     def get_grid_width(self):
-        """
-        Get the width of the board.
-        """
+        """Get the width of the board."""
         return self.width
 
     def move(self, direction):
@@ -106,22 +103,22 @@ class TwentyFortyEight:
         square.  The tile should be 2 90% of the time and
         4 10% of the time.
         """
-        # replace with your code
+        # get list of indices for cells whose value == 0
+        # randomly select one if lst != [] for set_tile
+        # randomly select 2 with prop. .9, else 4 for value
+
         pass
 
     def set_tile(self, row, col, value):
-        """
-        Set the tile at position row, col to have the given value.
-        """
+        """Set the tile at position row, col to have the given value."""
         # replace with your code
         pass
 
     def get_tile(self, row, col):
-        """
-        Return the value of the tile at position row, col.
-        """
+        """Return the value of the tile at position row, col."""
         # replace with your code
         return 0
 
-
+game = TwentyFortyEight(2, 3)
+test.run_suite(game)
 # poc_2048_gui.run_gui(TwentyFortyEight(4, 5))
