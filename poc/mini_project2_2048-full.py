@@ -111,14 +111,14 @@ class TwentyFortyEight:
 
     def set_tile(self, row, col, value):
         """Set the tile at position row, col to have the given value."""
-        # replace with your code
-        pass
+        if row < self.height and col < self.width:
+            self.board[row][col] = value
 
     def get_tile(self, row, col):
         """Return the value of the tile at position row, col."""
-        # replace with your code
-        return 0
+        if row < self.height and col < self.width:        
+            return self.board[row][col]
 
-game = TwentyFortyEight(2, 3)
+game = TwentyFortyEight(5, 4)
 test.run_suite(game)
 # poc_2048_gui.run_gui(TwentyFortyEight(4, 5))
