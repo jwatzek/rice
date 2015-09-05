@@ -102,8 +102,24 @@ class TwentyFortyEight:
         Move all tiles in the given direction and add
         a new tile if any tiles moved.
         """
-        # replace with your code
-        pass
+        if direction in [UP, DOWN]:
+            length = self.height
+        else:
+            length = self.width
+
+        for cell in self.initial[direction]:
+            coords = [cell]
+            for nxt in range(length - 1):
+                old = coords[-1]
+                coords.append((old[0] + OFFSETS[direction][0], old[1] + OFFSETS[direction][1]))
+
+            temp = [self.get_tile(row, col) for (row, col) in coords]
+            temp = merge(temp)
+
+            for idx, (row, col) in enumerate(coords):
+                self.set_tile(row, col, temp[idx])
+
+        return str(self)
 
     def new_tile(self):
         """
