@@ -19,8 +19,9 @@ All miniprojects can be run in [Codeskulptor](http://www.codeskulptor.org/).
 Practice
 - Magical 8-ball
 
-### PC
+### PoC
 - 2048 (Merge)
+- 2048 (Full)
 
 Practice
 - Solitaire Mancala
