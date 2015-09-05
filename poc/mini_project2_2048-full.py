@@ -4,6 +4,7 @@ Clone of 2048 game.
 
 # import poc_2048_gui
 import mini_project2_test as test
+import random
 
 # Directions, DO NOT MODIFY
 UP = 1
@@ -69,8 +70,15 @@ class TwentyFortyEight:
         """Reset the game so the grid is empty except for two initial tiles."""
         self.board = [[0 for dummy_col in range(self.width)]
                          for dummy_row in range(self.height)]
-        self.new_tile()
-        self.new_tile()
+
+        self.initial = {}
+        self.initial[UP] = [(0, col) for col in range(self.width)]
+        self.initial[DOWN] = [(self.height - 1, col) for col in range(self.width)]
+        self.initial[LEFT] = [(row, 0) for row in range(self.height)]
+        self.initial[RIGHT] = [(row, self.width - 1) for row in range(self.height)]
+
+        # self.new_tile()
+        # self.new_tile()
         return self.board
 
     def __str__(self):
@@ -103,11 +111,19 @@ class TwentyFortyEight:
         square.  The tile should be 2 90% of the time and
         4 10% of the time.
         """
-        # get list of indices for cells whose value == 0
-        # randomly select one if lst != [] for set_tile
-        # randomly select 2 with prop. .9, else 4 for value
+        empty = []
+        for row in range(self.height):
+            for col in range(self.width):
+                if self.board[row][col] == 0:
+                    empty.append([row, col])
 
-        pass
+        if empty != []:
+            idx = random.randrange(len(empty))
+            num = random.random()
+            if num < .9:
+                self.set_tile(empty[idx][0], empty[idx][1], 2)
+            else:
+                self.set_tile(empty[idx][0], empty[idx][1], 4)
 
     def set_tile(self, row, col, value):
         """Set the tile at position row, col to have the given value."""
