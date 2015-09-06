@@ -1,7 +1,10 @@
 import simpletest
 
 def run_suite(game):
-    """Some informal testing code"""
+    """
+    Some informal testing code. 
+    Uncomment self.new_tile() lines in reset method!
+    """
 
     # create a TestSuite object
     suite = simpletest.TestSuite()
@@ -95,7 +98,7 @@ def run_suite(game):
     suite.run_test(game.initial[3], [(0, 0), (1, 0), (2, 0), (3, 0)], "Test #14:")
     suite.run_test(game.initial[4], [(0, 4), (1, 4), (2, 4), (3, 4)], "Test #15:")
 
-    # pseudo-test move
+    # test move
     suite.run_test(game.move(1), 
 """
 [8, 2, 8, 8, 4]
@@ -128,8 +131,4 @@ def run_suite(game):
 [0, 0, 4, 16, 4]
 """, "Test #19")
 
-
-
     suite.report_results()
-
-
