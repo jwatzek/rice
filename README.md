@@ -22,6 +22,7 @@ Practice
 ### PoC
 - 2048 (Merge)
 - 2048 (Full)
+- Tic-Tac-Toe (Monte Carlo)
 
 Practice
 - Solitaire Mancala
