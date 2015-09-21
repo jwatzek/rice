@@ -23,6 +23,7 @@ Practice
 - 2048 (Merge)
 - 2048 (Full)
 - Tic-Tac-Toe (Monte Carlo)
+- Yahtzee (Strategy planner)
 
 Practice
 - Solitaire Mancala
